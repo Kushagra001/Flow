@@ -1,3 +1,31 @@
+# Flow — SaaS Landing (Project 01)
+
+Flow is a modern SaaS landing template built with Next.js, Tailwind CSS, Framer Motion, and shared UI primitives.
+
+Quick start
+
+Prerequisites: Node 18+, pnpm
+
+Install and run locally:
+
+```bash
+pnpm install
+pnpm dev
+```
+
+Build for production:
+
+```bash
+pnpm build
+pnpm start
+```
+
+Notes
+- This project consumes `@agency/shared` from the monorepo workspace. When used standalone, ensure the package is published or linked.
+- See `PRODUCT.md` for product and content notes.
+
+License
+- MIT
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

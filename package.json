@@ -1,6 +1,7 @@
 {
   "name": "01-saas-landing",
   "version": "0.1.0",
+  "description": "Flow — SaaS landing template built with Next.js, Tailwind, and shared UI components.",
   "private": true,
   "scripts": {
     "dev": "next dev",
