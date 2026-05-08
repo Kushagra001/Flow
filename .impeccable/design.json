@@ -1,0 +1,210 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-07T00:00:00.000Z",
+  "title": "Design System: Flōw",
+  "extensions": {
+    "colorMeta": {
+      "brand-primary": {
+        "role": "primary",
+        "displayName": "Vermilion Signal",
+        "canonical": "oklch(59.9% 0.177 39)",
+        "tonalRamp": [
+          "oklch(15% 0.177 39)",
+          "oklch(26% 0.177 39)",
+          "oklch(37% 0.177 39)",
+          "oklch(48% 0.177 39)",
+          "oklch(59.9% 0.177 39)",
+          "oklch(71% 0.177 39)",
+          "oklch(83% 0.177 39)",
+          "oklch(95% 0.177 39)"
+        ]
+      },
+      "brand-hover": {
+        "role": "primary",
+        "displayName": "Vermilion Lift",
+        "canonical": "oklch(65.1% 0.187 43)",
+        "tonalRamp": [
+          "oklch(15% 0.187 43)",
+          "oklch(26% 0.187 43)",
+          "oklch(37% 0.187 43)",
+          "oklch(48% 0.187 43)",
+          "oklch(65.1% 0.187 43)",
+          "oklch(74% 0.187 43)",
+          "oklch(85% 0.187 43)",
+          "oklch(95% 0.187 43)"
+        ]
+      },
+      "surface-base": {
+        "role": "neutral",
+        "displayName": "Studio Cream",
+        "canonical": "oklch(97% 0.005 80)",
+        "tonalRamp": [
+          "oklch(15% 0.005 80)",
+          "oklch(26% 0.005 80)",
+          "oklch(37% 0.005 80)",
+          "oklch(48% 0.005 80)",
+          "oklch(60% 0.005 80)",
+          "oklch(72% 0.005 80)",
+          "oklch(84% 0.005 80)",
+          "oklch(97% 0.005 80)"
+        ]
+      },
+      "text-primary": {
+        "role": "neutral",
+        "displayName": "Charcoal Ink",
+        "canonical": "oklch(25% 0.005 80)",
+        "tonalRamp": [
+          "oklch(15% 0.005 80)",
+          "oklch(20% 0.005 80)",
+          "oklch(25% 0.005 80)",
+          "oklch(32% 0.005 80)",
+          "oklch(45% 0.005 80)",
+          "oklch(60% 0.005 80)",
+          "oklch(78% 0.005 80)",
+          "oklch(95% 0.005 80)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero statements and marquee section lines."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section anchors and major narrative transitions."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Card and panel-level labels."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Primary reading copy and supporting explanations."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Micro labels, tags, and interface metadata."
+      }
+    },
+    "shadows": [
+      {
+        "name": "ambient-glow",
+        "value": "radial-gradient(ellipse 80% 60% at 50% 100%, color-mix(in oklch, var(--color-brand-primary) 20%, transparent) 0%, transparent 70%)",
+        "purpose": "Warm focus glow behind the CTA panel."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-expo-standard",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Default deceleration for section transitions and panel swaps."
+      },
+      {
+        "name": "duration-fast",
+        "value": "150ms",
+        "purpose": "Button and compact control state transitions."
+      },
+      {
+        "name": "duration-standard",
+        "value": "300ms",
+        "purpose": "Section-level and panel transitions."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main conversion CTA used in navigation and forms.",
+      "html": "<button class=\"ds-btn-primary\">Get early access</button>",
+      "css": ".ds-btn-primary { background: var(--color-brand-primary); color: #ffffff; border: none; border-radius: 6px; padding: 8px 16px; font-family: var(--font-sans), system-ui, sans-serif; font-size: 14px; font-weight: 500; letter-spacing: 0.01em; cursor: pointer; transition: background-color 150ms cubic-bezier(0.16, 1, 0.3, 1), transform 150ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-primary:hover { background: var(--color-brand-hover); transform: translateY(-1px); } .ds-btn-primary:focus-visible { outline: 2px solid color-mix(in oklch, var(--color-brand-primary) 50%, white); outline-offset: 2px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary low-emphasis action in the navigation shell.",
+      "html": "<button class=\"ds-btn-ghost\">Sign in</button>",
+      "css": ".ds-btn-ghost { background: transparent; color: var(--color-foreground); border: 1px solid rgba(26,22,18,0.2); border-radius: 6px; padding: 8px 16px; font-family: var(--font-sans), system-ui, sans-serif; font-size: 14px; font-weight: 500; letter-spacing: 0.01em; cursor: pointer; transition: border-color 150ms cubic-bezier(0.16, 1, 0.3, 1), background-color 150ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-ghost:hover { border-color: rgba(26,22,18,0.4); background: rgba(26,22,18,0.03); } .ds-btn-ghost:focus-visible { outline: 2px solid rgba(26,22,18,0.35); outline-offset: 2px; }"
+    },
+    {
+      "name": "Status Badge",
+      "kind": "chip",
+      "refersTo": "badge-accent",
+      "description": "Compact live-state indicator with optional pulse dot.",
+      "html": "<span class=\"ds-badge\"><span class=\"ds-dot\" aria-hidden=\"true\"></span>Listening</span>",
+      "css": ".ds-badge { display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px; border-radius: 999px; border: 1px solid rgba(234,88,12,0.4); background: color-mix(in oklch, var(--color-brand-primary) 8%, transparent); color: var(--color-brand-primary); font-family: var(--font-sans), system-ui, sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; } .ds-dot { width: 6px; height: 6px; border-radius: 999px; background: var(--color-brand-hover); animation: ds-ping 1.8s cubic-bezier(0,0,0.2,1) infinite; } @keyframes ds-ping { 0% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.35); opacity: 0.55; } 100% { transform: scale(1); opacity: 1; } }"
+    },
+    {
+      "name": "Raised Panel Card",
+      "kind": "card",
+      "refersTo": "card-raised",
+      "description": "Primary container panel for CTA and feature stages.",
+      "html": "<section class=\"ds-panel\"><h3 class=\"ds-panel-title\">Your brain called.</h3><p class=\"ds-panel-body\">It wants help.</p></section>",
+      "css": ".ds-panel { background: var(--color-surface-raised); color: var(--color-foreground); border: 1px solid var(--color-surface-border); border-radius: 16px; padding: 40px; } .ds-panel-title { margin: 0 0 8px; font-family: var(--font-display), system-ui, sans-serif; font-size: clamp(20px, 2.5vw, 28px); font-weight: 500; letter-spacing: -0.01em; } .ds-panel-body { margin: 0; font-family: var(--font-sans), system-ui, sans-serif; font-size: 16px; line-height: 1.65; color: var(--color-surface-muted); max-width: 65ch; }"
+    },
+    {
+      "name": "Email Input",
+      "kind": "input",
+      "refersTo": "input-email",
+      "description": "Waitlist capture field with brand-tinted focus halo.",
+      "html": "<label class=\"ds-input-wrap\"><span class=\"ds-input-label\">Email address</span><input class=\"ds-input\" type=\"email\" placeholder=\"you@company.com\" /></label>",
+      "css": ".ds-input-wrap { display: grid; gap: 6px; width: 100%; } .ds-input-label { font-family: var(--font-sans), system-ui, sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-surface-muted); } .ds-input { width: 100%; border-radius: 8px; border: 1px solid var(--color-surface-border); background: var(--color-surface-overlay); color: var(--color-foreground); padding: 12px 16px; font-family: var(--font-sans), system-ui, sans-serif; font-size: 14px; line-height: 1.4; transition: border-color 200ms cubic-bezier(0.16,1,0.3,1), box-shadow 200ms cubic-bezier(0.16,1,0.3,1); } .ds-input::placeholder { color: var(--color-surface-muted); } .ds-input:hover { border-color: rgba(26,22,18,0.18); } .ds-input:focus-visible { outline: none; border-color: color-mix(in oklch, var(--color-brand-primary) 60%, transparent); box-shadow: 0 0 0 3px color-mix(in oklch, var(--color-brand-primary) 18%, transparent); }"
+    },
+    {
+      "name": "Sticky Stage Navigation",
+      "kind": "nav",
+      "refersTo": "card-raised",
+      "description": "How It Works tabbed progression rail for Capture, Process, and Act.",
+      "html": "<nav class=\"ds-stage-nav\"><button class=\"ds-stage-btn is-active\"><span class=\"ds-stage-num\">01</span><span class=\"ds-stage-label\">Capture</span></button><button class=\"ds-stage-btn\"><span class=\"ds-stage-num\">02</span><span class=\"ds-stage-label\">Process</span></button><button class=\"ds-stage-btn\"><span class=\"ds-stage-num\">03</span><span class=\"ds-stage-label\">Act</span></button></nav>",
+      "css": ".ds-stage-nav { display: flex; gap: 0; border-bottom: 1px solid rgba(26,22,18,0.08); } .ds-stage-btn { position: relative; display: flex; flex-direction: column; gap: 4px; padding: 16px 64px 16px 0; border: 0; background: transparent; cursor: pointer; opacity: 0.42; transition: opacity 300ms cubic-bezier(0.16,1,0.3,1); } .ds-stage-num { font-family: var(--font-sans), system-ui, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.06em; color: var(--color-surface-muted); } .ds-stage-label { font-family: var(--font-display), system-ui, sans-serif; font-size: clamp(20px,2.5vw,28px); letter-spacing: -0.01em; color: var(--color-foreground); } .ds-stage-btn:hover { opacity: 0.72; } .ds-stage-btn.is-active { opacity: 1; } .ds-stage-btn.is-active .ds-stage-num { color: var(--color-brand-primary); } .ds-stage-btn.is-active::after { content: \"\"; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: var(--color-brand-primary); } .ds-stage-btn:focus-visible { outline: 2px solid color-mix(in oklch, var(--color-brand-primary) 45%, transparent); outline-offset: 2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Sunlit Control Room",
+    "overview": "Flōw uses warm neutrals, intentional whitespace, and one committed vermilion accent to make task triage feel clear and human. It avoids cold enterprise density while preserving production-grade precision in interaction states and hierarchy. The visual direction is optimistic and editorial in rhythm, but operational in function.",
+    "keyCharacteristics": [
+      "Committed vermilion accent on warm cream base",
+      "Large display hierarchy with restrained body styles",
+      "Flat-by-default surfaces with selective depth cues",
+      "Sticky narrative stages for process storytelling",
+      "Visible focus and state transitions across controls"
+    ],
+    "rules": [
+      {
+        "name": "One Voice Rule",
+        "body": "Reserve vermilion for intent, including action, active state, and meaningful status.",
+        "section": "colors"
+      },
+      {
+        "name": "Flat By Default Rule",
+        "body": "Depth appears only when state or context requires emphasis.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do apply brand primary to key action and progress states only.",
+      "Do keep section spacing generous and rhythm-driven.",
+      "Do preserve readable body lines near 65 to 75 characters.",
+      "Do use exponential easing curves for transitions."
+    ],
+    "donts": [
+      "Don't clone dark mode Vercel or Linear aesthetics.",
+      "Don't use gradient text headings or purple glow motifs.",
+      "Don't rely on generic equal-card gray grids.",
+      "Don't remove visible focus indication from controls."
+    ]
+  }
+}
