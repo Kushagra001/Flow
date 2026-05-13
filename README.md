@@ -2,6 +2,8 @@
 
 **Flow** is a modern SaaS landing page template designed for productivity and task management solutions. Built with Next.js 16, Tailwind CSS, and Framer Motion, it demonstrates professional design patterns and conversion-focused UX.
 
+![Flow Home](./public/home.png)
+
 ## Overview
 
 Flow showcases a complete SaaS landing page with:
